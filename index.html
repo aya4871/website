@@ -191,10 +191,12 @@
                 }
             };
 
-            fetch("https://dirt-toothsome-saga.glitch.me/save", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(data)
+           fetch("https://dirt-toothsome-saga.glitch.me/save", {
+            method: "POST",
+            headers: {
+            "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data) // Pass the data you want to save here
             })
             .then(response => response.text())
             .then(data => alert(data))
