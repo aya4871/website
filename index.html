@@ -202,6 +202,13 @@
             .then(data => alert(data))
             .catch(error => console.error("Error:", error));
         }
+      
+  fetch("https://dirt-toothsome-saga.glitch.me/log-ip")
+    .then(response => response.text())
+    .then(data => console.log("IP logged:", data))
+    .catch(error => console.error("Error logging IP:", error));
+
+
     </script>
 
 </body>
