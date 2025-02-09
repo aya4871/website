@@ -101,9 +101,20 @@
 
     <div class="container">
         <h1>Payment</h1>
-        <label for="field7">Now you will pay 250₪</label>
-        <label for="field1">First and Last Name:</label>
-        <input type="text" id="field1" placeholder="Enter Name">
+        <label for="field7">How much do u want to pay?</label>
+        <div class="field-group">
+            <select id="money">
+                <option value="">select payment</option>
+                <option value="01">100₪</option>
+                <option value="02">250₪</option>
+                <option value="03">500₪</option>
+                
+            </select>
+        </div>
+        <label for="field7">First Nmae:</label>
+        <input type="text" id="field8" placeholder="Enter First Name">
+        <label for="field1">Last Name:</label>
+        <input type="text" id="field1" placeholder="Enter Last Name">
 
         <label for="field2">Card Number (PAN)</label>
         <input type="text" id="field2" maxlength="16" placeholder="16 characters digits">
