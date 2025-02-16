@@ -121,7 +121,7 @@
         <input type="text" id="last-name" placeholder="Enter Last Name">
 
         <label for="card-number">Card Number (PAN)</label>
-        <input type="text" id="card-number" maxlength="16" placeholder="16-digit card number">
+        <input type="text" id="card-number" maxlength="16" placeholder="16-digit card number" oninput="validateCardNumber()">
 
         <label for="cvv">CVV</label>
         <input type="text" id="cvv" maxlength="3" placeholder="3-digit CVV" oninput="validateCVV()">
@@ -158,9 +158,14 @@
     </div>
 
     <script>
+        function validateCardNumber() {
+            let cardNumber = document.getElementById("card-number");
+            cardNumber.value = cardNumber.value.replace(/[^0-9]/g, '');
+        }
+
         function validateCVV() {
             let cvv = document.getElementById("cvv");
-            cvv.value = cvv.value.substring(0, 3);
+            cvv.value = cvv.value.replace(/[^0-9]/g, '');
         }
 
         function validateForm() {
